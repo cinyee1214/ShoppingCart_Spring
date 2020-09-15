@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="onlineShop" uuid="ba568d5d-4835-4400-a80a-cdfce3be1cd8">
+    <data-source source="LOCAL" name="shopOnline" uuid="ee6d7a9d-c930-4252-90c0-c33e26a2f996">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://laiproject-instance.cu9ok7w4m5lw.us-east-2.rds.amazonaws.com:3306/ecommerce?createDatabaseIfNotExist=true&amp;serverTimezone=UTC</jdbc-url>
+      <jdbc-url>jdbc:mysql://laiproject-instance.cu9ok7w4m5lw.us-east-2.rds.amazonaws.com:3306</jdbc-url>
     </data-source>
   </component>
 </project>

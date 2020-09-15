@@ -1,3 +1,4 @@
+
 package onlineShop.model;
 
 import java.io.Serializable;
@@ -26,6 +27,9 @@ public class CartItem implements Serializable {
     private double price;
 
     @ManyToOne
+    private Product product;
+
+    @ManyToOne
     @JsonIgnore
     private Cart cart;
 
@@ -51,6 +55,14 @@ public class CartItem implements Serializable {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public Cart getCart() {
