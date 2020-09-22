@@ -1,4 +1,3 @@
-
 package onlineShop;
 
 import javax.sql.DataSource;
@@ -16,6 +15,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    // authentication
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .inMemoryAuthentication().withUser("xinyi@gmail.com").password("123").authorities("ROLE_ADMIN");
+
+        auth
+                .jdbcAuthentication()
+                .dataSource(dataSource)
+                .usersByUsernameQuery("SELECT emailId, password, enabled FROM users WHERE emailId=?")
+                .authoritiesByUsernameQuery("SELECT emailId, authorities FROM authorities WHERE emailId=?");
+
+    }
+
+    // authorization
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -34,18 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .inMemoryAuthentication().withUser("stefanlaioffer@gmail.com").password("123").authorities("ROLE_ADMIN");
 
-        auth
-                .jdbcAuthentication()
-                .dataSource(dataSource)
-                .usersByUsernameQuery("SELECT emailId, password, enabled FROM users WHERE emailId=?")
-                .authoritiesByUsernameQuery("SELECT emailId, authorities FROM authorities WHERE emailId=?");
-
-    }
 
     @SuppressWarnings("deprecation")
     @Bean
