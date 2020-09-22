@@ -1,4 +1,5 @@
 onlineShop/model/Product.class
+onlineShop/controller/HomePageController.class
 onlineShop/model/ShippingAddress.class
 onlineShop/log/ServerLogger.class
 onlineShop/log/Logger.class
@@ -8,7 +9,11 @@ onlineShop/Application.class
 onlineShop/model/SalesOrder.class
 onlineShop/model/Customer.class
 onlineShop/model/CartItem.class
+onlineShop/SecurityConfig.class
+onlineShop/service/CustomerService.class
 onlineShop/model/Authorities.class
+onlineShop/dao/CustomerDao.class
+onlineShop/controller/RegistrationController.class
 onlineShop/model/User.class
 onlineShop/model/BillingAddress.class
 onlineShop/log/PaymentAction.class

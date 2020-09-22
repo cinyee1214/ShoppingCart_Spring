@@ -23,7 +23,7 @@
 			<div class="row">
 			
 				<c:url value="/admin/product/addProduct" var="url"></c:url>
-				<form:form method="post" action="${url}" modelAttribute="productForm" enctype="multipart/form-data">
+				<form:form method="post" action="${url}" modelAttribute="productForm">
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-6 form-group">

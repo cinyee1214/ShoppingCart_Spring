@@ -1,4 +1,7 @@
+/Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/service/CustomerService.java
+/Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/SecurityConfig.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/User.java
+/Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/controller/HomePageController.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/CartItem.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/log/ServerLogger.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/log/PaymentAction.java
@@ -8,7 +11,9 @@
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/BillingAddress.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/ShippingAddress.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/Authorities.java
+/Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/dao/CustomerDao.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/Cart.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/SalesOrder.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/model/Product.java
 /Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/Application.java
+/Users/cinyee/IdeaProjects/onlineShop/src/main/java/onlineShop/controller/RegistrationController.java

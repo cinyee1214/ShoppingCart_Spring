@@ -28,9 +28,12 @@ public class CustomerDao {
             session.beginTransaction();
             session.save(authorities);
             session.save(customer);
+            // commit two "save"s above
             session.getTransaction().commit();
+            // transaction is atomic
         } catch (Exception e) {
             e.printStackTrace();
+            // if there is exception, rollback to the status before current transaction
             session.getTransaction().rollback();
         } finally {
             if (session != null) {
@@ -39,12 +42,12 @@ public class CustomerDao {
         }
     }
 
-    public Customer getCustomerByUserName(String userName) {
+    public Customer getCustomerByUserName(String email) {
         User user = null;
+        // try with resource, the session will be automatically closed
         try (Session session = sessionFactory.openSession()) {
-
             Criteria criteria = session.createCriteria(User.class);
-            user = (User) criteria.add(Restrictions.eq("emailId", userName)).uniqueResult();
+            user = (User) criteria.add(Restrictions.eq("emailId", email)).uniqueResult();
         } catch (Exception e) {
             e.printStackTrace();
         }

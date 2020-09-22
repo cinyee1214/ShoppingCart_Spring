@@ -22,7 +22,7 @@ public class CustomerService {
         customerDao.addCustomer(customer);
     }
 
-    public Customer getCustomerByUserName(String userName) {
-        return customerDao.getCustomerByUserName(userName);
+    public Customer getCustomerByUserName(String userEmail) {
+        return customerDao.getCustomerByUserName(userEmail);
     }
 }

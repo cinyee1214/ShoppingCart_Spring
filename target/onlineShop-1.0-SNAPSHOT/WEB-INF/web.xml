@@ -1,6 +1,6 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+		"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+		"http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
 	<display-name>OnlineShop WebSite</display-name>
@@ -13,6 +13,16 @@
 			/WEB-INF/webflowConfig.xml
 		</param-value>
 	</context-param>
+
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 	<!-- it is used to listen the contextloader -->
 	<listener>
